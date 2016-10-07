@@ -1,0 +1,19 @@
+{
+  "name": "mapping-the-epic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mgalicer/mapping-the-epic.git"
+  },
+  "author": "Mari Galicer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mgalicer/mapping-the-epic/issues"
+  },
+  "homepage": "https://github.com/mgalicer/mapping-the-epic#readme"
+}
