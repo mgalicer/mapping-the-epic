@@ -17,7 +17,9 @@
   },
   "homepage": "https://github.com/mgalicer/mapping-the-epic#readme",
   "dependencies": {
+    "dotenv": "^2.0.0",
     "ejs": "^2.5.2",
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+    "firebase": "^3.5.0"
   }
 }

@@ -5,4 +5,4 @@ function initMap() {
     zoom: 4
   });
 }
-console.log("HERE!!")
+console.log()
