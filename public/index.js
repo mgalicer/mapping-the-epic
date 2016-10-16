@@ -119,16 +119,19 @@ function placeMarkers(){
       map: map,
       position: hannos_journey[i][2],
       animation: google.maps.Animation.DROP
+
     });
-    makeInfoWindow(marker, hannos_journey[i][1])
+    makeInfoWindow(marker, hannos_journey[i])
   }
 
 }
 
 
 function makeInfoWindow(marker, description) {
+  // marker.setLabel(description[3].toString())
+  console.log(description[3])
   var infowindow = new google.maps.InfoWindow({
-     content: description
+     content: description[1]
    });
 
   marker.addListener('click', function() {
