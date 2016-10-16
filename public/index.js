@@ -2,22 +2,21 @@ var map;
 var geocoder;
 
 var hannos_journey = [
-  ["Straits of Gibraltar", "This is where the Straits of Gibraltar, referred to in Hanno's Journey as the Pillars of Herakles, refer to.", {lat: 35.9794336, lng: -5.9108498}],
-  ["Mehdya Morocco", "Hanno says \"after sailing beyond the Pillars for two days, we founded our first city, called Thymiaterion\" which the text identifies with the Moroccan harbor of Mehidya.", {lat: 34.2560985, lng: -6.6797949}],
-  ["ras cantin", "Hanno then arrived at Soloeis, which is a rendering of Phoenician Selaim, 'rocks'. Lendering (author of the text commentary) notes that most scholars place them at Cape Cantin.", {lat: 32.5408325, lng: -9.2943104}],
-  ["Im'fout, Morocco", "This is the location for Im'fout, Morocco, one of the only modernly identifiable interpretations of Hanno's journey along the Oum er Rbia river in Morocco.", {lat: 33.0457411, lng: -7.7940879}],
-  ["Oued Draa, Morocco", "Hanno then travels to the Lixos (Phoenician, Ligs), which is often identified with the river Drâa, which flows into the Atlantic Ocean opposite the Canary Islands.", {lat: 29.5760811, lng: -10.5488409}],
-  ["anti-atlas", "This point represents the peak of the Anti-Atlas mountain range, which Lendering says is one of the many options of mountain ranges that Hanno could have seen the Ethiopians.", {lat: 30.3508703, lng: -8.0369582}],
-  ["Ad Dakhla", "The text states that \"after sailing eastward for one day, we found in the recess of a bay a small island which had a circumference of five stades. We left settlers there and called it Kerne.\" ", {lat: 23.7057938, lng: -15.980853}],
-  ["Bay of Arguin, Mauritania", "description", {lat: 20.590526, lng: -17.5880007}],
-  ["Senegal river", "description", {lat: 15.2247605, lng: -15.9179334}],
-  ["Cape Mesurado", "description", {lat: 6.3124998, lng: -10.8254215}],
-  // ["liberia", "description", {lat: , lng: }],
-  ["Gulf of Guinea", "description", {lat: 2.8471754, lng: -3.1699268}],
-  ["Cape Three Points", "description", {lat: 4.7430556, lng: -2.0924665}],
-  ["Mount Cameroon", "description", {lat: 4.2173911, lng: 9.1027071}],
-  ["Corisco bay", "description", {lat: 0.8412265, lng: 9.1673075}],
-  ["Libreville", "description", {lat: 0.4114468, lng: 9.2945429}]
+  ["Straits of Gibraltar", "<b>Straits of Gibraltar:</b>  This is where the Straits of Gibraltar, referred to in Hanno's Journey as the Pillars of Herakles, refer to.", {lat: 35.9794336, lng: -5.9108498}, 1],
+  ["Mehdya Morocco", "<b>Mehdya:</b> Hanno says \"after sailing beyond the Pillars for two days, we founded our first city, called Thymiaterion\" which the text identifies with the Moroccan harbor of Mehidya.", {lat: 34.2560985, lng: -6.6797949}, 2],
+  ["ras cantin", "<b>Ras Cantin:</b> Hanno then arrived at Soloeis, which is a rendering of Phoenician Selaim, 'rocks'. Lendering (author of the text commentary) notes that most scholars place them at Cape Cantin.", {lat: 32.5408325, lng: -9.2943104}, 3],
+  ["Im'fout, Morocco", "<b>Im'fout: </b>This is the location for Im'fout, Morocco, one of the only modernly identifiable interpretations of Hanno's journey along the Oum er Rbia river in Morocco.", {lat: 33.0457411, lng: -7.7940879}, 4],
+  ["Oued Draa, Morocco", "<b>Oued Draa: </b>Hanno then travels to the Lixos (Phoenician, Ligs), which is often identified with the river Drâa, which flows into the Atlantic Ocean opposite the Canary Islands.", {lat: 29.5760811, lng: -10.5488409}, 5],
+  ["anti-atlas", "<b>Peak of the Anti-Atlas mountains: </b>This point represents the peak of the Anti-Atlas mountain range, which Lendering says is one of the many options of mountain ranges that Hanno could have seen the Ethiopians.", {lat: 30.3508703, lng: -8.0369582}, 6],
+  ["Ad Dakhla", "<b>Ad Dahkla: </b> The text states that \"after sailing eastward for one day, we found in the recess of a bay a small island which had a circumference of five stades. We left settlers there and called it Kerne.\" ", {lat: 23.7057938, lng: -15.980853}, 7],
+  ["Bay of Arguin, Mauritania", "<b>Bay of Arguin: </b>Located along the Mauritanian coast, this is the other alternative to where Kerne could have been located. ", {lat: 20.590526, lng: -17.5880007}, 8],
+  ["Senegal river", "<b>Senegal River: </b>Hanno describes this as \"another large, broad river teeming with crocodiles and hippopotamuses\" which is identified as the Senegal. As you can see, the marker falls somewhere inland from the river itself.", {lat: 15.2247605, lng: -15.9179334}, 9],
+  ["Cape Mesurado", "<b>Cape Mesurado: </b>This is assumed to be the place where Hanno \"anchored by some big mountains.\"", {lat: 6.3124998, lng: -10.8254215}, 10],
+  ["Gulf of Guinea", "<b>Gulf of Guinea: </b>This is one of the few places that is described with relatively concrete geography: \" we came to an immense expanse of sea beyond which, on the landward side, was a plain.\"", {lat: 2.8471754, lng: -3.1699268}, 11],
+  ["Cape Three Points", "<b>Cape Three Points: </b>Lendering interprets the bay mentioned as the bay of the Horn of the West, which is associated with Cape Three Points in modern Ghana.", {lat: 4.7430556, lng: -2.0924665}, 12],
+  ["Mount Cameroon", "<b>Mount Cameroon: </b>Hanno calls this mountain \"Chariot of the Gods\" and a big flame, taller than the others and apparently rising to the stars. Mount Cameroon is a known volcano that erupted in 1922.", {lat: 4.2173911, lng: 9.1027071}, 13],
+  ["Corisco bay", "<b>Corisco Bay: </b> This bay is called  Horn of the South in the text.", {lat: 0.8412265, lng: 9.1673075}, 14],
+  ["Libreville", "<b>Libreville: </b> This was where Hanno's crew came into contact with what they described as \"women with hairy bodies, whom our interpreters called \"gorillas\"\", and Lendering interprets this as the northwestern point of the Libreville peninsula.", {lat: 0.4114468, lng: 9.2945429}, 15]
 ];
 
 
