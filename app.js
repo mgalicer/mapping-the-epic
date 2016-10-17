@@ -4,7 +4,7 @@ var firebase = require("firebase");
 var geocoder;
 // require('dotenv').config();
 // geocoder = new google.maps.Geocoder();
-
+app.set('port', (process.env.PORT || 5000));
 app.use(express.static(__dirname + '/public'));
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
@@ -18,6 +18,6 @@ app.get('/discussion', function (req, res) {
 })
 
 
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!');
+app.listen(app.get('port'), function () {
+  console.log('Example app listening on port ' + app.get('port'));
 });
