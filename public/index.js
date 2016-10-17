@@ -134,7 +134,11 @@ function makeInfoWindow(marker, description) {
      content: description[1]
    });
 
-  marker.addListener('click', function() {
+  marker.addListener('mouseover', function() {
       infowindow.open(map, marker);
     });
+
+  marker.addListener('mouseout', function(){
+    infowindow.close(map, marker)
+  })
 }
