@@ -10,8 +10,13 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
 app.get('/', function (req, res) {
-  res.render('index', {data: "hello"});
+  res.render('index');
 });
+
+app.get('/discussion', function (req, res) {
+  res.render('discussion')
+})
+
 
 app.listen(3000, function () {
   console.log('Example app listening on port 3000!');

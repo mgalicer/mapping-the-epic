@@ -3,7 +3,7 @@ var geocoder;
 
 var hannos_journey = [
   ["Straits of Gibraltar", "<b>Straits of Gibraltar:</b>  This is where the Straits of Gibraltar, referred to in Hanno's Journey as the Pillars of Herakles, refer to.", {lat: 35.9794336, lng: -5.9108498}, 1],
-  ["Mehdya Morocco", "<b>Mehdya:</b> Hanno says \"after sailing beyond the Pillars for two days, we founded our first city, called Thymiaterion\" which the text identifies with the Moroccan harbor of Mehidya.", {lat: 34.2560985, lng: -6.6797949}, 2],
+  ["Mehdya Morocco", "<b>Mehdya:</b> This point represents when Hanno says \"after sailing beyond the Pillars for two days, we founded our first city, called Thymiaterion\" which the text identifies with the Moroccan harbor of Mehidya.", {lat: 34.2560985, lng: -6.6797949}, 2],
   ["ras cantin", "<b>Ras Cantin:</b> Hanno then arrived at Soloeis, which is a rendering of Phoenician Selaim, 'rocks'. Lendering (author of the text commentary) notes that most scholars place them at Cape Cantin.", {lat: 32.5408325, lng: -9.2943104}, 3],
   ["Im'fout, Morocco", "<b>Im'fout: </b>This is the location for Im'fout, Morocco, one of the only modernly identifiable interpretations of Hanno's journey along the Oum er Rbia river in Morocco.", {lat: 33.0457411, lng: -7.7940879}, 4],
   ["Oued Draa, Morocco", "<b>Oued Draa: </b>Hanno then travels to the Lixos (Phoenician, Ligs), which is often identified with the river Drâa, which flows into the Atlantic Ocean opposite the Canary Islands.", {lat: 29.5760811, lng: -10.5488409}, 5],
@@ -131,7 +131,8 @@ function makeInfoWindow(marker, description) {
   // marker.setLabel(description[3].toString())
   console.log(description[3])
   var infowindow = new google.maps.InfoWindow({
-     content: description[1]
+     content: description[1],
+     maxWidth: 300
    });
 
   marker.addListener('mouseover', function() {

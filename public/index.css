@@ -3,6 +3,24 @@ html, body {
   margin: 0;
   padding: 0;
 }
+
+p {
+  text-indent: 50px;
+  font-family: Arial;
+}
+
+h2 {
+  font-family: Arial;
+}
+
 #map {
   height: 100%;
+}
+
+#essay {
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top:5%;
+  margin-bottom: 5%;
+  line-height: 1.5;
 }
