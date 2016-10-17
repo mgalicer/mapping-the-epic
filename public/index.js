@@ -106,7 +106,7 @@ var markers = [];
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'),
   {
-    center: {lat: 24.6571694, lng: 32.4466171},
+    center: {lat: 20.7068748, lng: 4.1534768},
     zoom: 4,
     styles: mapStyles
   });
